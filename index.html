@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Puzzle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper container row">
+            <i id="icon" class="material-icons col s1">grid_on</i>
+            <div id="title" class="col">15puzzle</div>
+        </div>
+    </nav>
+    <div class="container row">
+        <div class="col s4 selector-container">
+            <label>Size</label>
+            <select name="size" id="size-selector" class="browser-default">
+                <option value="15">15</option>
+                <option value="8">8</option>
+            </select>
+        </div>
+        <div class="col s4 selector-container">
+            <label>Numeral system</label>
+            <select name="roman" id="roman-selector" class="browser-default">
+                <option value="false">Arabic</option>
+                <option value="true">Roman</option>
+            </select>
+        </div>
+        <div class="col s2 button-container">
+            <button onclick="puzzle.randomize(300)" id="shuffle-btn" class="btn">Shuffle</button>
+        </div>
+        <div id="puzzle-container" class="col s12"></div>
+    </div>
+    
+    <script type="text/javascript" src="puzzle.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
